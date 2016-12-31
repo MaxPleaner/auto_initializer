@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+require 'auto_initializer'
+class AutoInitializer::CLI < Thor
+  desc "test", "run tests"
+  def test
+    puts "No tests have been wrritten"
+    exit
+  end
+end
+AutoInitializer::CLI.start ARGV

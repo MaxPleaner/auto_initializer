@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+Dir.glob("./*.gem").each { |path| `rm #{path}` }
+puts `gem uninstall -x auto_initializer`
+puts `gem build auto_initializer.gemspec`
+Dir.glob("./*.gem").each { |path| puts `gem install -f #{path}` }
